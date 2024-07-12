@@ -1,0 +1,18 @@
+{
+  "packageManager": "yarn@4.3.1",
+  "name": "monorepo",
+  "workspaces": [
+    "apps/*",
+    "common/*"
+  ],
+  "scripts": {
+    "dlx:vscode": "yarn dlx @yarnpkg/sdks vscode",
+    "monorepo-project": "yarn workspace @monorepo/monorepo-project",
+    "monorepo-utils": "yarn workspace @monorepo/utils"
+  },
+  "devDependencies": {
+    "eslint": "^9.6.0",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.3"
+  }
+}
