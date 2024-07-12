@@ -1,0 +1,8 @@
+{
+  "name": "@monorepo/utils",
+  "version": "1.0.0",
+  "description": "monorepo common utils",
+  "main": "index.ts",
+  "license": "ISC",
+  "packageManager": "yarn@4.3.1"
+}
