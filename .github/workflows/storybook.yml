@@ -9,6 +9,7 @@ on:
       - "common/components/**"
       - "common/styles/**"
       - "!common/**/package.json"
+      - ".github/workflows/storybook.yml"
   pull_request:
     branches:
       - main
@@ -16,7 +17,7 @@ on:
       - "common/components/**"
       - "common/styles/**"
       - "!common/**/package.json"
-
+      - ".github/workflows/storybook.yml"
 jobs:
   storybook:
     runs-on: ubuntu-latest
@@ -35,9 +36,11 @@ jobs:
           cache: "yarn"
           cache-dependency-path: "yarn.lock"
 
-      - run: yarn install
+      - name: Install dependencies
+        run: yarn install
 
-      - run: yarn build:components
+      - name: Build Storybook
+        run: yarn build-storybook
 
       - name: Deploy Storybook
         uses: chromaui/action@v1
