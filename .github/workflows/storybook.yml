@@ -49,4 +49,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           onlyChanged: true
           externals: common/**
-          workingDir: common/components
+          # workingDir:  
