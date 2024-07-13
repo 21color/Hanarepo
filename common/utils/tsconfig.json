@@ -1,9 +1,11 @@
 {
   "extends": "../../tsconfig.base.json",
   "include": [
-    "./src"
+    "./src",
+    "**/*.ts"
   ],
   "compilerOptions": {
-    "moduleResolution": "node",
+    "jsxImportSource": "@emotion/react",
   },
+  "moduleResolution": "node",
 }

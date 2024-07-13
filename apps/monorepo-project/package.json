@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@monorepo/components": "*",
     "@monorepo/utils": "*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

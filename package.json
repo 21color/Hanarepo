@@ -8,11 +8,39 @@
   "scripts": {
     "dlx:vscode": "yarn dlx @yarnpkg/sdks vscode",
     "monorepo-project": "yarn workspace @monorepo/monorepo-project",
-    "monorepo-utils": "yarn workspace @monorepo/utils"
+    "monorepo-utils": "yarn workspace @monorepo/utils",
+    "monorepo-components": "yarn workspace @monorepo/components",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "chormatic": "dotenv -- cross-var chromatic --project-token=%CHROMATIC_PROJECT_TOKEN%",
+    "chromatic": "npx chromatic "
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.6.1",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@storybook/addon-essentials": "^8.2.2",
+    "@storybook/addon-interactions": "^8.2.2",
+    "@storybook/addon-links": "^8.2.2",
+    "@storybook/addon-onboarding": "^8.2.2",
+    "@storybook/blocks": "^8.2.2",
+    "@storybook/builder-vite": "^8.2.2",
+    "@storybook/react": "^8.2.2",
+    "@storybook/react-vite": "^8.2.2",
+    "@storybook/test": "^8.2.2",
+    "@types/react": "^18.3.3",
+    "chromatic": "^11.5.5",
+    "cross-var": "^1.1.0",
+    "dotenv-cli": "^7.4.2",
     "eslint": "^9.6.0",
+    "eslint-plugin-storybook": "^0.8.0",
     "prettier": "^3.3.2",
-    "typescript": "^5.5.3"
-  }
+    "storybook": "^8.2.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3"
+  },
+  "dependencies": {
+    "@types/node": "^20.11.6"
+  },
+  "version": ""
 }

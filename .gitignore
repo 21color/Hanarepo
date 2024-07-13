@@ -11,3 +11,8 @@
 
 #!.yarn/cache
 .pnp.*
+
+*storybook.log
+
+#env
+.env
