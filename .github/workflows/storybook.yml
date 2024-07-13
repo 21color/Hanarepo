@@ -1,0 +1,49 @@
+name: Storybook Deployment
+run-name: ${{ github.actor }} 의 Storybook 배포
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "common/components/**"
+      - "common/styles/**"
+      - "!common/**/package.json"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "common/components/**"
+      - "common/styles/**"
+      - "!common/**/package.json"
+
+jobs:
+  storybook:
+    runs-on: ubuntu-latest
+    outputs:
+      status: ${{ job.status}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js version 20.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+          cache: "yarn"
+          cache-dependency-path: "yarn.lock"
+
+      - run: yarn install
+
+      - run: yarn build:components
+
+      - name: Deploy Storybook
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          onlyChanged: true
+          externals: common/**
+          workingDir: common/components
