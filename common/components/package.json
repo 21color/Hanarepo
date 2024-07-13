@@ -5,6 +5,7 @@
   "main": "index.ts",
   "license": "ISC",
   "packageManager": "yarn@4.3.1",
+  "scripts": {},
   "dependencies": {
     "@monorepo/utils": "*",
     "react": "^18.2.0",
