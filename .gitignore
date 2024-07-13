@@ -13,3 +13,6 @@
 .pnp.*
 
 *storybook.log
+
+#env
+.env

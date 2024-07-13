@@ -11,7 +11,9 @@
     "monorepo-utils": "yarn workspace @monorepo/utils",
     "monorepo-components": "yarn workspace @monorepo/components",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chormatic": "dotenv -- cross-var chromatic --project-token=%CHROMATIC_PROJECT_TOKEN%",
+    "chromatic": "npx chromatic "
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
@@ -27,6 +29,9 @@
     "@storybook/react-vite": "^8.2.2",
     "@storybook/test": "^8.2.2",
     "@types/react": "^18.3.3",
+    "chromatic": "^11.5.5",
+    "cross-var": "^1.1.0",
+    "dotenv-cli": "^7.4.2",
     "eslint": "^9.6.0",
     "eslint-plugin-storybook": "^0.8.0",
     "prettier": "^3.3.2",
@@ -36,5 +41,6 @@
   },
   "dependencies": {
     "@types/node": "^20.11.6"
-  }
+  },
+  "version": ""
 }
