@@ -5,7 +5,12 @@
   "main": "index.ts",
   "license": "ISC",
   "packageManager": "yarn@4.3.1",
-  "scripts": {},
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "chormatic": "dotenv -- cross-var chromatic --project-token=%CHROMATIC_PROJECT_TOKEN%",
+    "chromatic": "npx chromatic"
+  },
   "dependencies": {
     "@monorepo/utils": "*",
     "react": "^18.2.0",

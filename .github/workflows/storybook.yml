@@ -8,7 +8,7 @@ on:
     paths:
       - "common/components/**"
       - "common/styles/**"
-      - "!common/**/package.json"
+      # - "!common/**/package.json"
       - ".github/workflows/storybook.yml"
   pull_request:
     branches:
