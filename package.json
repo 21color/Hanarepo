@@ -8,11 +8,18 @@
   "scripts": {
     "dlx:vscode": "yarn dlx @yarnpkg/sdks vscode",
     "monorepo-project": "yarn workspace @monorepo/monorepo-project",
-    "monorepo-utils": "yarn workspace @monorepo/utils"
+    "monorepo-utils": "yarn workspace @monorepo/utils",
+    "monorepo-components": "yarn workspace @monorepo/components"
   },
   "devDependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@types/react": "^18.3.3",
     "eslint": "^9.6.0",
     "prettier": "^3.3.2",
     "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@types/node": "^20.11.6"
   }
 }

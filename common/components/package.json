@@ -1,0 +1,18 @@
+{
+  "name": "@monorepo/components",
+  "version": "1.0.0",
+  "description": "monorepo common components",
+  "main": "index.ts",
+  "license": "ISC",
+  "packageManager": "yarn@4.3.1",
+  "dependencies": {
+    "@monorepo/utils": "*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@types/react": "^18.3.3"
+  }
+}

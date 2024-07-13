@@ -7,5 +7,4 @@
   "compilerOptions": {
     "jsxImportSource": "@emotion/react",
   },
-  "moduleResolution": "node",
 }
