@@ -12,7 +12,7 @@ type Story = StoryObj<typeof Button>;
 export const Default: Story = {
   args: {
     buttonType: "primary",
-    title: "버튼",
+    title: "버튼 -!",
     disabled: false,
   },
 };
