@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/monorepo-project",
+  "name": "@hanarepo/hanarepo-project",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
@@ -8,8 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@monorepo/components": "*",
-    "@monorepo/utils": "*",
+    "@hanarepo/components": "*",
+    "@hanarepo/utils": "*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

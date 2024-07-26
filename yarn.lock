@@ -1881,6 +1881,46 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hanarepo/components@npm:*, @hanarepo/components@workspace:shared/components":
+  version: 0.0.0-use.local
+  resolution: "@hanarepo/components@workspace:shared/components"
+  dependencies:
+    "@emotion/react": "npm:^11.11.4"
+    "@emotion/styled": "npm:^11.11.5"
+    "@hanarepo/utils": "npm:*"
+    "@types/react": "npm:^18.3.3"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+  languageName: unknown
+  linkType: soft
+
+"@hanarepo/hanarepo-project@workspace:apps/monorepo-project":
+  version: 0.0.0-use.local
+  resolution: "@hanarepo/hanarepo-project@workspace:apps/monorepo-project"
+  dependencies:
+    "@hanarepo/components": "npm:*"
+    "@hanarepo/utils": "npm:*"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    "@typescript-eslint/eslint-plugin": "npm:^7.13.1"
+    "@typescript-eslint/parser": "npm:^7.13.1"
+    "@vitejs/plugin-react": "npm:^4.3.1"
+    eslint: "npm:^8.57.0"
+    eslint-plugin-react-hooks: "npm:^4.6.2"
+    eslint-plugin-react-refresh: "npm:^0.4.7"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:^5.2.2"
+    vite: "npm:^5.3.1"
+  languageName: unknown
+  linkType: soft
+
+"@hanarepo/utils@npm:*, @hanarepo/utils@workspace:shared/utils":
+  version: 0.0.0-use.local
+  resolution: "@hanarepo/utils@workspace:shared/utils"
+  languageName: unknown
+  linkType: soft
+
 "@humanwhocodes/config-array@npm:^0.11.14":
   version: 0.11.14
   resolution: "@humanwhocodes/config-array@npm:0.11.14"
@@ -2007,46 +2047,6 @@ __metadata:
   checksum: 10c0/d210d926ef488d39ad65f04d821936b668eadcdde3b6421e94ec4200ca7ad17f17d24c5cbc543882586af9f08b10e2eea715c728ce6277487945e05c5199f532
   languageName: node
   linkType: hard
-
-"@monorepo/components@npm:*, @monorepo/components@workspace:common/components":
-  version: 0.0.0-use.local
-  resolution: "@monorepo/components@workspace:common/components"
-  dependencies:
-    "@emotion/react": "npm:^11.11.4"
-    "@emotion/styled": "npm:^11.11.5"
-    "@monorepo/utils": "npm:*"
-    "@types/react": "npm:^18.3.3"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-  languageName: unknown
-  linkType: soft
-
-"@monorepo/monorepo-project@workspace:apps/monorepo-project":
-  version: 0.0.0-use.local
-  resolution: "@monorepo/monorepo-project@workspace:apps/monorepo-project"
-  dependencies:
-    "@monorepo/components": "npm:*"
-    "@monorepo/utils": "npm:*"
-    "@types/react": "npm:^18.3.3"
-    "@types/react-dom": "npm:^18.3.0"
-    "@typescript-eslint/eslint-plugin": "npm:^7.13.1"
-    "@typescript-eslint/parser": "npm:^7.13.1"
-    "@vitejs/plugin-react": "npm:^4.3.1"
-    eslint: "npm:^8.57.0"
-    eslint-plugin-react-hooks: "npm:^4.6.2"
-    eslint-plugin-react-refresh: "npm:^0.4.7"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
-    typescript: "npm:^5.2.2"
-    vite: "npm:^5.3.1"
-  languageName: unknown
-  linkType: soft
-
-"@monorepo/utils@npm:*, @monorepo/utils@workspace:common/utils":
-  version: 0.0.0-use.local
-  resolution: "@monorepo/utils@workspace:common/utils"
-  languageName: unknown
-  linkType: soft
 
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
@@ -6188,6 +6188,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hanarepo@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "hanarepo@workspace:."
+  dependencies:
+    "@chromatic-com/storybook": "npm:^1.6.1"
+    "@emotion/react": "npm:^11.11.4"
+    "@emotion/styled": "npm:^11.11.5"
+    "@storybook/addon-essentials": "npm:^8.2.2"
+    "@storybook/addon-interactions": "npm:^8.2.2"
+    "@storybook/addon-links": "npm:^8.2.2"
+    "@storybook/addon-onboarding": "npm:^8.2.2"
+    "@storybook/blocks": "npm:^8.2.2"
+    "@storybook/builder-vite": "npm:^8.2.2"
+    "@storybook/react": "npm:^8.2.2"
+    "@storybook/react-vite": "npm:^8.2.2"
+    "@storybook/test": "npm:^8.2.2"
+    "@types/node": "npm:^20.11.6"
+    "@types/react": "npm:^18.3.3"
+    chromatic: "npm:^11.5.5"
+    cross-var: "npm:^1.1.0"
+    dotenv-cli: "npm:^7.4.2"
+    eslint: "npm:^9.6.0"
+    eslint-plugin-storybook: "npm:^0.8.0"
+    prettier: "npm:^3.3.2"
+    storybook: "npm:^8.2.2"
+    typescript: "npm:^5.5.3"
+    vite: "npm:^5.3.3"
+  languageName: unknown
+  linkType: soft
+
 "has-ansi@npm:^2.0.0":
   version: 2.0.0
   resolution: "has-ansi@npm:2.0.0"
@@ -7281,36 +7311,6 @@ __metadata:
   checksum: 10c0/d836a7b0adff4d118af41fb93ad4d9e57f80e694a681185280ba220a4607603c19e86c80f9a6c57512b04280567f2599e3386081705c5b5fd74c9ddfd571d0fa
   languageName: node
   linkType: hard
-
-"monorepo@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "monorepo@workspace:."
-  dependencies:
-    "@chromatic-com/storybook": "npm:^1.6.1"
-    "@emotion/react": "npm:^11.11.4"
-    "@emotion/styled": "npm:^11.11.5"
-    "@storybook/addon-essentials": "npm:^8.2.2"
-    "@storybook/addon-interactions": "npm:^8.2.2"
-    "@storybook/addon-links": "npm:^8.2.2"
-    "@storybook/addon-onboarding": "npm:^8.2.2"
-    "@storybook/blocks": "npm:^8.2.2"
-    "@storybook/builder-vite": "npm:^8.2.2"
-    "@storybook/react": "npm:^8.2.2"
-    "@storybook/react-vite": "npm:^8.2.2"
-    "@storybook/test": "npm:^8.2.2"
-    "@types/node": "npm:^20.11.6"
-    "@types/react": "npm:^18.3.3"
-    chromatic: "npm:^11.5.5"
-    cross-var: "npm:^1.1.0"
-    dotenv-cli: "npm:^7.4.2"
-    eslint: "npm:^9.6.0"
-    eslint-plugin-storybook: "npm:^0.8.0"
-    prettier: "npm:^3.3.2"
-    storybook: "npm:^8.2.2"
-    typescript: "npm:^5.5.3"
-    vite: "npm:^5.3.3"
-  languageName: unknown
-  linkType: soft
 
 "ms@npm:2.0.0":
   version: 2.0.0

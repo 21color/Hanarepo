@@ -1,15 +1,15 @@
 {
   "packageManager": "yarn@4.3.1",
-  "name": "monorepo",
+  "name": "hanarepo",
   "workspaces": [
     "apps/*",
-    "common/*"
+    "shared/*"
   ],
   "scripts": {
     "dlx:vscode": "yarn dlx @yarnpkg/sdks vscode",
-    "monorepo-project": "yarn workspace @monorepo/monorepo-project",
-    "monorepo-utils": "yarn workspace @monorepo/utils",
-    "monorepo-components": "yarn workspace @monorepo/components",
+    "hanarepo-project": "yarn workspace @hanarepo/hanarepo-project",
+    "hanarepo-utils": "yarn workspace @hanarepo/utils",
+    "hanarepo-components": "yarn workspace @hanarepo/components",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chormatic": "dotenv -- cross-var chromatic --project-token=%CHROMATIC_PROJECT_TOKEN%",

@@ -13,7 +13,7 @@ const config: StorybookConfig = {
   stories: [
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
-    "../common/**/*.stories.tsx",
+    "../shared/**/*.stories.tsx",
   ],
   addons: [
     getAbsolutePath("@storybook/addon-onboarding"),

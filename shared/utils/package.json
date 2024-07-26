@@ -1,7 +1,7 @@
 {
-  "name": "@monorepo/utils",
+  "name": "@hanarepo/utils",
   "version": "1.0.0",
-  "description": "monorepo common utils",
+  "description": "hanarepo shared utils",
   "main": "index.ts",
   "license": "ISC",
   "packageManager": "yarn@4.3.1"
