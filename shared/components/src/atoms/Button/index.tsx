@@ -24,6 +24,12 @@ const ButtonText = styled.span<{
   fontSize: number;
   fontWeight: number;
 }>`
+
+font-size: ${(props) => `${props.fontSize}px`};
+font-weight: ${(props) => props.fontWeight};
+}`;
+
+const StyledButton = styled.button<{ variant: ButtonTypes }>`
   color: ${(props) => {
     switch (props.variant) {
       case "primary":
@@ -36,11 +42,6 @@ const ButtonText = styled.span<{
         return vars.color.white;
     }
   }};
-  font-size: ${(props) => `${props.fontSize}px`};
-  font-weight: ${(props) => props.fontWeight};
-}`;
-
-const StyledButton = styled.button<{ variant: ButtonTypes }>`
   background-color: ${(props) => {
     switch (props.variant) {
       case "primary":
@@ -73,7 +74,9 @@ const StyledButton = styled.button<{ variant: ButtonTypes }>`
   display: inline-block;
   cursor: pointer;
   transition-duration: 0.25s;
+
   &:hover {
+    color: ${vars.color.white};
     background-color: ${(props) => {
       switch (props.variant) {
         case "primary":
@@ -86,9 +89,13 @@ const StyledButton = styled.button<{ variant: ButtonTypes }>`
           return vars.color.primaryDark;
       }
     }};
+  }
+
   &:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+    color: #666;
+    border-color: #ccc;
   }
 `;
 

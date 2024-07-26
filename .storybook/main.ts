@@ -1,5 +1,4 @@
 import type { StorybookConfig } from "@storybook/react-vite";
-
 import { join, dirname } from "path";
 
 /**
@@ -26,7 +25,7 @@ const config: StorybookConfig = {
     builder: "@storybook/builder-vite",
   },
   framework: {
-    name: getAbsolutePath("@storybook/react-vite"),
+    name: "@storybook/react-vite",
     options: {},
   },
 };
