@@ -1,69 +1,91 @@
 import styled from "@emotion/styled";
-import { Button as ButtonType } from "./Button.type";
+import { ButtonTypes, ButtonProps } from "./Button.type";
+import { vars } from "@hanarepo/token/vars";
 
-type ButtonTypes = "primary" | "secondary" | "critical";
-
-const Button = ({ onClick, title, buttonType, disabled }: ButtonType) => {
+const Button = ({
+  onClick,
+  title,
+  variant,
+  disabled,
+  fontSize = vars.fontSize.medium,
+  fontWeight = vars.fontWeight.regular,
+}: ButtonProps) => {
   return (
-    <StyledButton disabled={disabled} onClick={onClick} buttonType={buttonType}>
-      <ButtonText buttonType={buttonType}>{title}</ButtonText>
+    <StyledButton disabled={disabled} onClick={onClick} variant={variant}>
+      <ButtonText fontSize={fontSize} fontWeight={fontWeight} variant={variant}>
+        {title}
+      </ButtonText>
     </StyledButton>
   );
 };
 
-const ButtonText = styled.span<{ buttonType: ButtonTypes }>`
+const ButtonText = styled.span<{
+  variant: ButtonTypes;
+  fontSize: number;
+  fontWeight: number;
+}>`
   color: ${(props) => {
-    switch (props.buttonType) {
+    switch (props.variant) {
       case "primary":
-        return "white";
+        return vars.color.white;
       case "secondary":
-        return "#007bff";
+        return vars.color.secondary;
       case "critical":
-        return "white";
+        return vars.color.warning;
       default:
-        return "white";
+        return vars.color.white;
     }
   }};
-`;
+  font-size: ${(props) => `${props.fontSize}px`};
+  font-weight: ${(props) => props.fontWeight};
+}`;
 
-const StyledButton = styled.button<{ buttonType: ButtonTypes }>`
+const StyledButton = styled.button<{ variant: ButtonTypes }>`
   background-color: ${(props) => {
-    switch (props.buttonType) {
+    switch (props.variant) {
       case "primary":
-        return "#007bff";
+        return vars.color.primary;
       case "secondary":
-        return "white";
       case "critical":
-        return "#dc3545";
+        return vars.color.white;
       default:
-        return "#007bff";
+        return vars.color.primary;
     }
   }};
-  border: ${(props) => {
-    switch (props.buttonType) {
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${(props) => {
+    switch (props.variant) {
       case "primary":
-        return "1px solid #007bff";
+        return vars.color.primary;
       case "secondary":
-        return "1px solid #007bff";
+        return vars.color.secondary;
       case "critical":
-        return "1px solid #dc3545";
+        return vars.color.warning;
       default:
-        return "1px solid #007bff";
+        return vars.color.primary;
     }
   }};
-  color: white;
   padding: 10px 20px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: ${vars.rounded.medium}px;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
   cursor: pointer;
   transition-duration: 0.25s;
-
   &:hover {
-    background-color: #0056b3;
-  }
+    background-color: ${(props) => {
+      switch (props.variant) {
+        case "primary":
+          return vars.color.primaryDark;
+        case "secondary":
+          return vars.color.secondaryDark;
+        case "critical":
+          return vars.color.warningDark;
+        default:
+          return vars.color.primaryDark;
+      }
+    }};
   &:disabled {
     background-color: #ccc;
     cursor: not-allowed;

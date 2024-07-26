@@ -1,10 +1,12 @@
-type ButtonTypes = "primary" | "secondary" | "critical";
+export type ButtonTypes = "primary" | "secondary" | "critical";
 
-interface Button {
+interface ButtonProps {
   onClick: () => void;
   title: string;
-  buttonType: ButtonTypes;
+  variant: ButtonTypes;
   disabled?: boolean;
+  fontSize?: number;
+  fontWeight?: number;
 }
 
-export type { Button };
+export type { ButtonProps };
