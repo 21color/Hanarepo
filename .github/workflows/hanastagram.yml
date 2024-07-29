@@ -39,10 +39,7 @@ jobs:
         run: yarn install
 
       - name: Build
-        run: yarn hanastagram:build
-
-      - name: Deploy
-        run: yarn hanastagram:deploy
+        run: yarn build
 
   amplify-webhook:
     runs-on: ubuntu-latest
