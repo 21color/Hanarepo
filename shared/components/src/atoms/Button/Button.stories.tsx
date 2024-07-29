@@ -22,7 +22,6 @@ export const Default: Story = {
     variant: "primary",
     title: "Click me",
     disabled: false,
-    fontSize: 16,
-    fontWeight: 400,
+    size: "medium",
   },
 };

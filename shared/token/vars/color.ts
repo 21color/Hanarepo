@@ -3,26 +3,31 @@ export const color = {
   primary: "#0070f3",
   primaryHover: "#3291ff",
   primaryDark: "#0761d1",
+  primaryLight: "#cce0ff",
 
   // secondary
   secondary: "#ff0080",
   secondaryHover: "#ff4d9e",
   secondaryDark: "#c10055",
+  secondaryLight: "#ffccf2",
 
   // success
   success: "#00d68f",
   successHover: "#00b887",
   successDark: "#00a37a",
+  successLight: "#e6fff3",
 
   // error
   error: "#ff3e3e",
   errorHover: "#ff5b5b",
   errorDark: "#e12d39",
+  errorLight: "#ffefef",
 
   //  warning
   warning: "#f5a623",
   warningHover: "#f7b52b",
   warningDark: "#ee9b1d",
+  warningLight: "#fff8e6",
 
   // info
   info: "#00b0ff",

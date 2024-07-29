@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { ButtonTypes, ButtonProps } from "./Button.type";
+import { ButtonTypes, ButtonProps, ButtonSizes } from "./Button.type";
 import { vars } from "@hanarepo/token/vars";
 
 const Button = ({
@@ -7,29 +7,21 @@ const Button = ({
   title,
   variant,
   disabled,
-  fontSize = vars.fontSize.medium,
-  fontWeight = vars.fontWeight.regular,
+  size = "medium",
 }: ButtonProps) => {
   return (
-    <StyledButton disabled={disabled} onClick={onClick} variant={variant}>
-      <ButtonText fontSize={fontSize} fontWeight={fontWeight} variant={variant}>
-        {title}
-      </ButtonText>
+    <StyledButton
+      size={size}
+      disabled={disabled}
+      onClick={onClick}
+      variant={variant}
+    >
+      <span>{title}</span>
     </StyledButton>
   );
 };
 
-const ButtonText = styled.span<{
-  variant: ButtonTypes;
-  fontSize: number;
-  fontWeight: number;
-}>`
-
-font-size: ${(props) => `${props.fontSize}px`};
-font-weight: ${(props) => props.fontWeight};
-}`;
-
-const StyledButton = styled.button<{ variant: ButtonTypes }>`
+const StyledButton = styled.button<{ variant: ButtonTypes; size: ButtonSizes }>`
   color: ${(props) => {
     switch (props.variant) {
       case "primary":
@@ -37,7 +29,7 @@ const StyledButton = styled.button<{ variant: ButtonTypes }>`
       case "secondary":
         return vars.color.secondary;
       case "critical":
-        return vars.color.warning;
+        return vars.color.error;
       default:
         return vars.color.white;
     }
@@ -62,12 +54,35 @@ const StyledButton = styled.button<{ variant: ButtonTypes }>`
       case "secondary":
         return vars.color.secondary;
       case "critical":
-        return vars.color.warning;
+        return vars.color.error;
       default:
         return vars.color.primary;
     }
   }};
-  padding: 10px 20px;
+  padding: ${(props) => {
+    switch (props.size) {
+      case "small":
+        return `${vars.spacing.small}px ${vars.spacing.medium}px`;
+      case "medium":
+        return `${vars.spacing.medium}px ${vars.spacing.large}px`;
+      case "large":
+        return `${vars.spacing.large}px ${vars.spacing.xlarge}px`;
+      default:
+        return `${vars.spacing.medium}px ${vars.spacing.large}px`;
+    }
+  }};
+  font-size: ${(props) => {
+    switch (props.size) {
+      case "small":
+        return `${vars.fontSize.small}px`;
+      case "medium":
+        return `${vars.fontSize.medium}px`;
+      case "large":
+        return `${vars.fontSize.large}px`;
+      default:
+        return `${vars.fontSize.medium}px`;
+    }
+  }};
   text-align: center;
   border-radius: ${vars.rounded.medium}px;
   text-decoration: none;
@@ -76,6 +91,21 @@ const StyledButton = styled.button<{ variant: ButtonTypes }>`
   transition-duration: 0.25s;
 
   &:hover {
+    background-color: ${(props) => {
+      switch (props.variant) {
+        case "primary":
+          return vars.color.primaryLight;
+        case "secondary":
+          return vars.color.secondaryLight;
+        case "critical":
+          return vars.color.errorLight;
+        default:
+          return vars.color.primaryLight;
+      }
+    }};
+  }
+
+  &:active {
     color: ${vars.color.white};
     background-color: ${(props) => {
       switch (props.variant) {
@@ -84,7 +114,7 @@ const StyledButton = styled.button<{ variant: ButtonTypes }>`
         case "secondary":
           return vars.color.secondaryDark;
         case "critical":
-          return vars.color.warningDark;
+          return vars.color.errorDark;
         default:
           return vars.color.primaryDark;
       }
