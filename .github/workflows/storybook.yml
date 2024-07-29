@@ -6,17 +6,17 @@ on:
     branches:
       - main
     paths:
-      - "common/components/**"
-      - "common/styles/**"
-      # - "!common/**/package.json"
+      - "shared/components/**"
+      - "shared/styles/**"
+      # - "!shared/**/package.json"
       - ".github/workflows/storybook.yml"
   pull_request:
     branches:
       - main
     paths:
-      - "common/components/**"
-      - "common/styles/**"
-      - "!common/**/package.json"
+      - "shared/components/**"
+      - "shared/styles/**"
+      - "!shared/**/package.json"
       - ".github/workflows/storybook.yml"
 jobs:
   storybook:
@@ -48,5 +48,5 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
           onlyChanged: true
-          externals: common/**
+          externals: shared/**
           # workingDir:  
