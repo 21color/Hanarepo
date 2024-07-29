@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "dlx:vscode": "yarn dlx @yarnpkg/sdks vscode",
-    "hanarepo-project": "yarn workspace @hanarepo/hanarepo-project",
+    "hanastagram": "yarn workspace @hanarepo/hanastagram",
     "hanarepo-utils": "yarn workspace @hanarepo/utils",
     "hanarepo-components": "yarn workspace @hanarepo/components",
     "storybook": "storybook dev -p 6006",
