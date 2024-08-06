@@ -1,4 +1,7 @@
+import { LOGIN } from "@/constants/routes";
+import Layout from "@/_shared/components/atoms/Layout";
+
 const Home = () => {
-  return <div>Home</div>;
+  return <Layout.Column>Home</Layout.Column>;
 };
 export default Home;
