@@ -1,6 +1,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { LoginInputs } from "./Login.types";
-import { useUsers } from "@/shared/apis/test/test.hooks";
+import { useUsers } from "@/_shared/apis/test/test.hooks";
 
 const Login = () => {
   const {
