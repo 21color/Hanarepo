@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import { vars } from "@hanarepo/token/vars";
 
 export type TextfildVariantType = {
   outlined: ReturnType<typeof css>;
@@ -19,15 +20,30 @@ export interface TextfildProps {
 
 export const TextfildVariants: TextfildVariantType = {
   outlined: css`
-    border: 1px solid black;
+    border: 1px solid ${vars.color.primary};
     padding: 5px;
   `,
   filled: css`
-    background-color: black;
+    background-color: ${vars.color.primary};
     color: white;
     padding: 5px;
+
+    &:focus {
+      background-color: ${vars.color.gray["800"]};
+    }
   `,
   standard: css`
-    padding: 5px;
+    border: none;
+    background-color: ${vars.color.gray["200"]};
+    border-radius: ${vars.border.large};
+    padding: ${vars.spacing.medium};
+
+    &:focus {
+      background-color: ${vars.color.white};
+    }
+
+    &::placeholder {
+      color: ${vars.color.gray["400"]};
+    }
   `,
 };

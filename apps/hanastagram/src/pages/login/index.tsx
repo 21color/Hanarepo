@@ -28,18 +28,20 @@ const Login = () => {
         value={watch("email")}
         type="email"
         placeholder="email"
+        helperText="This field is required"
+        vaildate={errors.email ? true : false}
         {...register("email", { required: true })}
       />
-      {errors.email && <span>This field is required</span>}
 
       <Textfild
         variant="standard"
         value={watch("password")}
         type="password"
         placeholder="password"
+        helperText="This field is required"
+        vaildate={errors.password ? true : false}
         {...register("password", { required: true })}
       />
-      {errors.password && <span>This field is required</span>}
 
       <Button title="로그인" variant="primary" type="submit" />
     </form>

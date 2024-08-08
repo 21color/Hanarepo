@@ -1,3 +1,4 @@
+import { vars } from "@hanarepo/token/vars";
 import { TextfildProps, TextfildVariants } from "./Textfild.type";
 
 import styled from "@emotion/styled";
@@ -22,7 +23,7 @@ const Textfild = ({
         onChange={onChange}
         placeholder={placeholder}
       />
-      {vaildate && <span>{helperText}</span>}
+      {vaildate && <VaildateText>{helperText}</VaildateText>}
     </TextfildWrapper>
   );
 };
@@ -33,4 +34,11 @@ const TextfildWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  text-align: left;
+  gap: 5px;
+`;
+
+const VaildateText = styled.span`
+  color: ${vars.color.error};
+  font-size: ${vars.fontSize.small};
 `;
