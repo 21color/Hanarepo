@@ -1,6 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { LoginInputs } from "./Login.types";
 import { useUsers } from "@/_shared/apis/test/test.hooks";
+import { Button, Textfild } from "@hanarepo/components";
 
 const Login = () => {
   const {
@@ -22,21 +23,25 @@ const Login = () => {
   console.log(watch("email"));
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input
+      <Textfild
+        variant="standard"
+        value={watch("email")}
         type="email"
         placeholder="email"
         {...register("email", { required: true })}
       />
       {errors.email && <span>This field is required</span>}
 
-      <input
+      <Textfild
+        variant="standard"
+        value={watch("password")}
         type="password"
         placeholder="password"
         {...register("password", { required: true })}
       />
       {errors.password && <span>This field is required</span>}
 
-      <input type="submit" />
+      <Button title="로그인" variant="primary" type="submit" />
     </form>
   );
 };

@@ -1,56 +1,36 @@
-import { TextfildProps } from "./Textfild.type";
-import { css } from "@emotion/react";
+import { TextfildProps, TextfildVariants } from "./Textfild.type";
 
-type TextfildVariantType = {
-  outlined: ReturnType<typeof css>;
-  filled: ReturnType<typeof css>;
-  standard: ReturnType<typeof css>;
-};
+import styled from "@emotion/styled";
 
-const TextfildVariants: TextfildVariantType = {
-  
-  outlined: css`
-    border: 1px solid black;
-    padding: 5px;
-  `,
-  filled: css`
-    background-color: black;
-    color: white;
-    padding: 5px;
-  `,
-  standard: css`
-    padding: 5px;
-  `,
-};
-
-
-
-export const Textfild = ({
+const Textfild = ({
   label,
   value,
+  type = "text",
   onChange,
   placeholder,
-  variant,
-  vaildate,
+  variant = "standard",
+  vaildate = false,
   helperText,
 }: TextfildProps) => {
   return (
-    <div
-      css={css`
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-      `}
-    >
+    <TextfildWrapper>
       <label>{label}</label>
       <input
         css={TextfildVariants[variant]}
-        type="text"
+        type={type}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
       />
       {vaildate && <span>{helperText}</span>}
-    </div>
+    </TextfildWrapper>
   );
 };
+
+export default Textfild;
+
+const TextfildWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+`;

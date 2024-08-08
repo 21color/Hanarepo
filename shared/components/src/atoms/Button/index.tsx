@@ -6,11 +6,13 @@ const Button = ({
   onClick,
   title,
   variant,
+  type,
   disabled,
   size = "medium",
 }: ButtonProps) => {
   return (
     <StyledButton
+      type={type}
       size={size}
       disabled={disabled}
       onClick={onClick}
