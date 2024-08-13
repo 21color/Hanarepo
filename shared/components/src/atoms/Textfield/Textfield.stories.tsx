@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
-import Textfild from "./index";
+import Textfield from "./index";
 
-const meta: Meta<typeof Textfild> = {
-  component: Textfild,
-  title: "Components/Textfild",
+const meta: Meta<typeof Textfield> = {
+  component: Textfield,
+  title: "Components/Textfield",
   argTypes: {
     variant: {
       control: {
@@ -16,7 +16,7 @@ const meta: Meta<typeof Textfild> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Textfild>;
+type Story = StoryObj<typeof Textfield>;
 
 export const Default: Story = {
   args: {
@@ -27,7 +27,7 @@ export const Default: Story = {
     },
     placeholder: "Enter your name",
     variant: "standard",
-    vaildate: false,
+    validate: false,
     helperText: "This field is required",
   },
 };

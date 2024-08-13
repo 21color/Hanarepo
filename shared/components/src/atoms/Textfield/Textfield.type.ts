@@ -1,24 +1,24 @@
 import { css } from "@emotion/react";
 import { vars } from "@hanarepo/token/vars";
 
-export type TextfildVariantType = {
+export type TextfieldVariantType = {
   outlined: ReturnType<typeof css>;
   filled: ReturnType<typeof css>;
   standard: ReturnType<typeof css>;
 };
 
-export interface TextfildProps {
+export interface TextfieldProps {
   label?: string;
   variant: "outlined" | "filled" | "standard";
   type?: string;
   placeholder: string;
   value: string;
-  vaildate?: boolean;
+  validate?: boolean;
   helperText?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const TextfildVariants: TextfildVariantType = {
+export const TextfieldVariants: TextfieldVariantType = {
   outlined: css`
     border: 1px solid ${vars.color.primary};
     padding: 5px;
