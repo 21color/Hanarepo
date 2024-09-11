@@ -17,6 +17,7 @@ const Textfield = ({
     <TextfieldWrapper>
       <label>{label}</label>
       <input
+        defaultValue={value}
         css={TextfieldVariants[variant]}
         type={type}
         value={value}

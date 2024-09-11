@@ -14,6 +14,7 @@ export interface TextfieldProps {
   placeholder: string;
   value: string;
   validate?: boolean;
+  defaultValue?: string;
   helperText?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

@@ -1,5 +1,6 @@
 import { ButtonProps } from "./Button.type";
-import { StyledButton } from "./Button.css";
+import { ButtonObject, ButtonBase } from "./Button.css";
+import { css } from "@emotion/react";
 
 const Button = ({
   onClick,
@@ -9,16 +10,20 @@ const Button = ({
   disabled,
   size = "medium",
 }: ButtonProps) => {
+  const buttonStyle = css`
+    ${ButtonBase}
+    ${ButtonObject[variant]}
+    ${ButtonObject[size]}
+
+    &:disabled {
+      ${ButtonObject.disabled}
+    }
+  `;
+
   return (
-    <StyledButton
-      type={type}
-      size={size}
-      disabled={disabled}
-      onClick={onClick}
-      variant={variant}
-    >
+    <button type={type} css={buttonStyle} disabled={disabled} onClick={onClick}>
       <span>{title}</span>
-    </StyledButton>
+    </button>
   );
 };
 
