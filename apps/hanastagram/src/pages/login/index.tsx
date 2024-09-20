@@ -23,7 +23,6 @@ const Login = () => {
   const { userData } = useUsers();
 
   const onSubmit: SubmitHandler<LoginInputs> = (data) => {
-    console.log(data);
     if (userData) {
       const userFound = userData.find(
         (user) => user.email === data.email && user.password === data.password,
@@ -43,6 +42,7 @@ const Login = () => {
         rules={{ required: true }}
         render={({ field: { onChange, value } }) => (
           <Textfield
+            data-cy="email"
             onChange={onChange}
             value={value}
             type="email"
@@ -59,6 +59,7 @@ const Login = () => {
         rules={{ required: true }}
         render={({ field: { onChange, value } }) => (
           <Textfield
+            data-cy="password"
             onChange={onChange}
             value={value}
             type="password"
@@ -71,6 +72,7 @@ const Login = () => {
         name="password"
       />
       <Button
+        data-cy="login-button"
         title="로그인"
         variant="primary"
         onClick={handleSubmit(onSubmit)}
