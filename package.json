@@ -19,6 +19,7 @@
     "@chromatic-com/storybook": "^1.6.1",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@storybook/addon-docs": "^8.3.2",
     "@storybook/addon-essentials": "^8.2.2",
     "@storybook/addon-interactions": "^8.2.2",
     "@storybook/addon-links": "^8.2.2",
