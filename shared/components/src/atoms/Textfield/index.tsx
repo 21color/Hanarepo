@@ -1,7 +1,12 @@
 import { vars } from "@hanarepo/token/vars";
-import { TextfieldProps, TextfieldVariants } from "./Textfield.type";
+import {
+  TextfieldProps,
+  TextfieldVariants,
+  validateStyle,
+} from "./Textfield.type";
 
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const Textfield = ({
   label,
@@ -15,10 +20,10 @@ const Textfield = ({
 }: TextfieldProps) => {
   return (
     <TextfieldWrapper>
-      <label>{label}</label>
+      <label css={Label}>{label}</label>
       <input
         defaultValue={value}
-        css={TextfieldVariants[variant]}
+        css={[TextfieldVariants[variant], validate && validateStyle(variant)]}
         type={type}
         value={value}
         onChange={onChange}
@@ -30,6 +35,12 @@ const Textfield = ({
 };
 
 export default Textfield;
+
+const Label = css({
+  fontSize: vars.fontSize.small,
+  color: vars.color.gray[600],
+  marginBottom: "5px",
+});
 
 const TextfieldWrapper = styled.div`
   display: flex;
