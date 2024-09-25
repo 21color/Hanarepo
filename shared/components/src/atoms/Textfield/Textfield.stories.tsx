@@ -31,6 +31,11 @@ const meta: Meta<typeof Textfield> = {
       description: "텍스트 필드의 validation 텍스트를 설정합니다.",
       control: { type: "text" },
     },
+    type: {
+      description: "텍스트 필드의 type을 설정합니다.",
+      options: ["text", "email", "password", "number", "tel", "search"],
+      control: { type: "radio" },
+    },
   },
 };
 
@@ -49,5 +54,6 @@ export const Default: Story = {
     variant: "standard",
     validate: false,
     helperText: "This field is required",
+    type: "text",
   },
 };

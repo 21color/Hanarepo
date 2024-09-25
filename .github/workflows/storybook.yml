@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - "shared/components/**"
+      - "shared/components/**"
       - "shared/styles/**"
       # - "!shared/**/package.json"
       - ".github/workflows/storybook.yml"
@@ -49,4 +50,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           onlyChanged: true
           externals: shared/**
-          # workingDir:  
+          # workingDir:

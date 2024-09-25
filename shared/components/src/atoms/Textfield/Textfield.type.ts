@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import { vars } from "@hanarepo/token/vars";
+import { InputHTMLAttributes } from "react";
 
 export type TextfieldVariantType = {
   outlined: ReturnType<typeof css>;
@@ -10,7 +11,7 @@ export type TextfieldVariantType = {
 export interface TextfieldProps {
   label?: string;
   variant: "outlined" | "filled" | "standard";
-  type?: string;
+  type?: InputHTMLAttributes<HTMLInputElement>["type"];
   placeholder: string;
   value: string;
   validate?: boolean;
