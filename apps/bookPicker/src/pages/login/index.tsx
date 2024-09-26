@@ -1,4 +1,4 @@
-import { useGetUserInfo } from "@/_shared/apis/User/user.hooks";
+import { useGetUserInfo } from "@/shared/apis/User/user.hooks";
 import { LoginForm } from "./types";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { loginContainer, flexColumn, input } from "./style.css";
