@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Flex } from "./index";
-import { Button } from "../../Button";
+import { Button } from "../../Button/Button";
 
 const meta: Meta<typeof Flex> = {
   tags: ["autodocs"],

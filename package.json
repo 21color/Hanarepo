@@ -12,8 +12,7 @@
     "hanarepo-components": "yarn workspace @hanarepo/components",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chormatic": "dotenv -- cross-var chromatic --project-token=%CHROMATIC_PROJECT_TOKEN%",
-    "chromatic": "npx chromatic ",
+    "chromatic": "dotenv -- cross-var chromatic --project-token=%CHROMATIC_PROJECT_TOKEN%",
     "cy:open": "cypress open"
   },
   "devDependencies": {

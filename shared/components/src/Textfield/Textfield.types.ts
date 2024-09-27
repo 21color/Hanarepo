@@ -27,9 +27,9 @@ const baseStyle = css`
 
 export const validateStyle = (variant: "outlined" | "filled" | "standard") =>
   css({
-    borderColor: vars.color.error,
+    borderColor: vars.color.semantic.error,
     backgroundColor:
-      variant === "filled" ? vars.color.errorLight : "transparent",
+      variant === "filled" ? vars.color.semantic.errorLight : "transparent",
   });
 
 export const TextfieldVariants: TextfieldVariantType = {
@@ -54,7 +54,7 @@ export const TextfieldVariants: TextfieldVariantType = {
     ${baseStyle}
 
     &:focus {
-      background-color: ${vars.color.white};
+      background-color: ${vars.color.semantic.white};
     }
 
     &::placeholder {

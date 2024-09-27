@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import Textfield from "./index";
+import { Textfield } from "./Textfield";
 
 const meta: Meta<typeof Textfield> = {
   tags: ["autodocs"],
