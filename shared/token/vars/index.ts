@@ -5,6 +5,8 @@ import { rounded } from "./rounded";
 import { spacing } from "./spacing";
 import { border } from "./border";
 import { shadow } from "./shadow";
+import { zIndex } from "./zIndex";
+import { typography } from "./typography";
 
 export const vars = {
   color,
@@ -14,4 +16,6 @@ export const vars = {
   spacing,
   border,
   shadow,
+  zIndex,
+  typography,
 } as const;

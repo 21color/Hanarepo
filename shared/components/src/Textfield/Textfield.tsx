@@ -3,12 +3,12 @@ import {
   TextfieldProps,
   TextfieldVariants,
   validateStyle,
-} from "./Textfield.type";
+} from "./Textfield.types";
 
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-const Textfield = ({
+export const Textfield = ({
   label,
   value,
   type = "text",
@@ -34,8 +34,6 @@ const Textfield = ({
   );
 };
 
-export default Textfield;
-
 const Label = css({
   fontSize: vars.fontSize.small,
   color: vars.color.gray[600],
@@ -51,6 +49,6 @@ const TextfieldWrapper = styled.div`
 `;
 
 const ValidateText = styled.span`
-  color: ${vars.color.error};
+  color: ${vars.color.semantic.error};
   font-size: ${vars.fontSize.small};
 `;

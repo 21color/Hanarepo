@@ -1,47 +1,49 @@
 import { vars } from "@hanarepo/token/vars";
 import { css } from "@emotion/react";
+import { typography } from "@hanarepo/token/vars/typography";
 
 const PrimaryButton = css`
   border: none;
-  color: ${vars.color.white};
-  background-color: ${vars.color.primary};
+  color: ${vars.color.semantic.white};
+  ${typography.button};
+  background-color: ${vars.color.semantic.primary};
   &:hover {
-    background-color: ${vars.color.primaryLight};
+    background-color: ${vars.color.semantic.primaryLight};
   }
   &:active {
-    background-color: ${vars.color.primaryDark};
+    background-color: ${vars.color.semantic.primaryDark};
   }
 `;
 
 const SecondaryButton = css`
   border: none;
-  background-color: ${vars.color.secondary};
-  color: ${vars.color.white};
+  background-color: ${vars.color.semantic.secondary};
+  color: ${vars.color.semantic.white};
 
   &:hover {
-    background-color: ${vars.color.secondaryLight};
+    background-color: ${vars.color.semantic.secondaryLight};
   }
   &:active {
-    background-color: ${vars.color.secondaryDark};
+    background-color: ${vars.color.semantic.secondaryDark};
   }
 `;
 
 const CriticalButton = css`
   border: none;
-  color: ${vars.color.white};
-  background-color: ${vars.color.error};
+  color: ${vars.color.semantic.white};
+  background-color: ${vars.color.semantic.error};
 
   &:hover {
-    background-color: ${vars.color.errorLight};
+    background-color: ${vars.color.semantic.errorLight};
   }
   &:active {
-    background-color: ${vars.color.errorDark};
+    background-color: ${vars.color.semantic.errorDark};
   }
 `;
 
 const DisabledButton = css`
   border: none;
-  color: ${vars.color.white};
+  color: ${vars.color.semantic.white};
   background-color: ${vars.color.gray[400]};
   cursor: not-allowed;
 `;

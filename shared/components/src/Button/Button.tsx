@@ -1,4 +1,4 @@
-import { ButtonProps } from "./Button.type";
+import { ButtonProps } from "./Button.types";
 import { ButtonObject, ButtonBase } from "./Button.css";
 import { css } from "@emotion/react";
 import {
