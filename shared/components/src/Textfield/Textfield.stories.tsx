@@ -4,7 +4,7 @@ import Textfield from "./index";
 const meta: Meta<typeof Textfield> = {
   tags: ["autodocs"],
   component: Textfield,
-  title: "Components/Textfield",
+  title: "components/Textfield",
   argTypes: {
     variant: {
       description: "텍스트 필드의 variant를 설정합니다.",

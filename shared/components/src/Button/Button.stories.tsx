@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react";
-import Button from "./index";
+import { Button } from ".";
 
 const meta: Meta<typeof Button> = {
   tags: ["autodocs"],
   component: Button,
-  title: "Components/Button",
+  title: "components/Button",
   argTypes: {
     variant: {
       description: "버튼의 variant를 설정합니다.",
@@ -22,6 +22,13 @@ const meta: Meta<typeof Button> = {
     },
     disabled: {
       description: "버튼의 비활성화 여부를 설정합니다.",
+      control: { type: "boolean" },
+    },
+    sx: {
+      description: "버튼의 sx props 을 설정합니다.",
+    },
+    fullWidth: {
+      description: "버튼의 width를 100%로 설정합니다.",
       control: { type: "boolean" },
     },
   },

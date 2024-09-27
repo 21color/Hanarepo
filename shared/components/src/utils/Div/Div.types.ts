@@ -4,10 +4,11 @@ import {
   CSSProperties,
   ElementType,
   PropsWithChildren,
-  ReactElement,
+  ReactNode,
 } from "react";
+import { BaseProps } from "../../types";
 
-export type DivProps = {
+export type DivProps<Element extends ElementType> = BaseProps<Element> & {
   _active?: CSSObject;
   _focus?: CSSObject;
   _hover?: CSSObject;
@@ -18,7 +19,7 @@ export type DivProps = {
   CSSProperties;
 
 export type DivComponent = <D extends ElementType = "div">(
-  props: DivProps & {
+  props: DivProps<D> & {
     ref?: ComponentPropsWithRef<D>["ref"];
   },
-) => ReactElement | null;
+) => ReactNode | null;

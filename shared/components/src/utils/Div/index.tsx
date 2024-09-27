@@ -13,11 +13,13 @@ export const Div: DivComponent = forwardRef(
       _after,
       size,
       children,
+      as,
+      sx,
       ...props
-    }: DivProps,
+    }: DivProps<E>,
     ref: ComponentPropsWithRef<E>["ref"],
   ) => {
-    const Element = "div";
+    const Element = as || "div";
 
     return (
       <Element
@@ -25,12 +27,13 @@ export const Div: DivComponent = forwardRef(
         css={{
           position: "relative",
           width: size,
-          ...props,
           "&:hover": _hover,
           "&:focus": _focus,
           "&:active": _active,
           "&::before": _before,
           "&::after": _after,
+          ...props,
+          ...sx,
         }}
       >
         {children}
