@@ -2,9 +2,9 @@ import { vars } from "@hanarepo/token/vars";
 import { css } from "@emotion/react";
 
 const PrimaryButton = css`
+  border: none;
   color: ${vars.color.white};
   background-color: ${vars.color.primary};
-  border-color: ${vars.color.primary};
   &:hover {
     background-color: ${vars.color.primaryLight};
   }
@@ -14,9 +14,10 @@ const PrimaryButton = css`
 `;
 
 const SecondaryButton = css`
-  color: ${vars.color.secondary};
-  background-color: ${vars.color.white};
-  border-color: ${vars.color.secondary};
+  border: none;
+  background-color: ${vars.color.secondary};
+  color: ${vars.color.white};
+
   &:hover {
     background-color: ${vars.color.secondaryLight};
   }
@@ -26,9 +27,10 @@ const SecondaryButton = css`
 `;
 
 const CriticalButton = css`
-  color: ${vars.color.error};
-  background-color: ${vars.color.white};
-  border-color: ${vars.color.error};
+  border: none;
+  color: ${vars.color.white};
+  background-color: ${vars.color.error};
+
   &:hover {
     background-color: ${vars.color.errorLight};
   }
@@ -38,29 +40,34 @@ const CriticalButton = css`
 `;
 
 const DisabledButton = css`
+  border: none;
   color: ${vars.color.white};
-  background-color: ${vars.color.gray};
-  border-color: ${vars.color.gray};
+  background-color: ${vars.color.gray[400]};
+  cursor: not-allowed;
 `;
 
 const SmallButton = css`
   padding: ${vars.spacing.small} ${vars.spacing.medium};
   font-size: ${vars.fontSize.small};
+  border-radius: ${vars.rounded.small}px;
 `;
 
 const MediumButton = css`
   padding: ${vars.spacing.medium} ${vars.spacing.large};
   font-size: ${vars.fontSize.medium};
+  border-radius: ${vars.rounded.medium}px;
 `;
 
 const LargeButton = css`
   padding: ${vars.spacing.large} ${vars.spacing.xlarge};
   font-size: ${vars.fontSize.large};
+  border-radius: ${vars.rounded.large}px;
 `;
 
 const XLargeButton = css`
   padding: ${vars.spacing.xlarge} ${vars.spacing.xlarge};
   font-size: ${vars.fontSize.xlarge};
+  border-radius: ${vars.rounded.xlarge}px;
 `;
 
 export const ButtonBase = css`

@@ -1,33 +1,33 @@
 export const color = {
   // primary
-  primary: "#0070f3",
-  primaryHover: "#3291ff",
-  primaryDark: "#0761d1",
-  primaryLight: "#cce0ff",
+  primary: "#00509E", // 깊은 블루
+  primaryHover: "#0066CC", // 약간 더 밝은 블루
+  primaryDark: "#003C73", // 어두운 블루
+  primaryLight: "#B3D4FF", // 부드러운 파스텔 블루
 
   // secondary
-  secondary: "#ff0080",
-  secondaryHover: "#ff4d9e",
-  secondaryDark: "#c10055",
-  secondaryLight: "#ffccf2",
+  secondary: "#6B7280", // 중간 톤 그레이
+  secondaryHover: "#4B5563", // 더 어두운 그레이
+  secondaryDark: "#374151", // 딥 다크 그레이
+  secondaryLight: "#D1D5DB", // 라이트 그레이
 
   // success
-  success: "#00d68f",
-  successHover: "#00b887",
-  successDark: "#00a37a",
-  successLight: "#e6fff3",
+  success: "#21A179", // 딥 그린
+  successHover: "#39D295", // 상쾌한 그린
+  successDark: "#197952", // 어두운 그린
+  successLight: "#D3F1E7", // 연한 민트
 
   // error
-  error: "#ff3e3e",
-  errorHover: "#ff5b5b",
-  errorDark: "#e12d39",
-  errorLight: "#ffefef",
+  error: "#C53030", // 진한 레드
+  errorHover: "#E53E3E", // 밝은 레드
+  errorDark: "#9B2C2C", // 다크 레드
+  errorLight: "#FED7D7", // 연한 핑크
 
   //  warning
-  warning: "#f5a623",
-  warningHover: "#f7b52b",
-  warningDark: "#ee9b1d",
-  warningLight: "#fff8e6",
+  warning: "#D69E2E", // 모던한 머스터드
+  warningHover: "#ECC94B", // 밝은 골드
+  warningDark: "#B7791F", // 다크 머스터드
+  warningLight: "#FDF6D3", // 부드러운 라이트 옐로우
 
   // info
   info: "#00b0ff",
