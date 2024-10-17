@@ -2039,6 +2039,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:^11.11.4"
     "@emotion/styled": "npm:^11.11.5"
+    "@hanarepo/styles": "npm:*"
     "@hanarepo/token": "npm:*"
     "@hanarepo/utils": "npm:*"
     "@storybook/react": "npm:^8.2.6"
@@ -2074,6 +2075,12 @@ __metadata:
     react-router-dom: "npm:^6.25.1"
     typescript: "npm:^5.2.2"
     vite: "npm:^5.3.1"
+  languageName: unknown
+  linkType: soft
+
+"@hanarepo/styles@npm:*, @hanarepo/styles@workspace:^, @hanarepo/styles@workspace:shared/stylesheet":
+  version: 0.0.0-use.local
+  resolution: "@hanarepo/styles@workspace:shared/stylesheet"
   languageName: unknown
   linkType: soft
 
@@ -7137,6 +7144,7 @@ __metadata:
     "@emotion/css": "npm:^11.13.0"
     "@emotion/react": "npm:^11.11.4"
     "@emotion/styled": "npm:^11.11.5"
+    "@hanarepo/styles": "workspace:^"
     "@storybook/addon-docs": "npm:^8.3.2"
     "@storybook/addon-essentials": "npm:^8.2.2"
     "@storybook/addon-interactions": "npm:^8.2.2"

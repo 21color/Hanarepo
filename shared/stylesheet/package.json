@@ -1,0 +1,15 @@
+{
+  "name": "@hanarepo/styles",
+  "version": "1.0.0",
+  "description": "hanarepo shared styles",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./src/stylesheet.css",
+  "exports": {
+    ".": "./src/stylesheet.css"
+  },
+  "files": [
+    "src"
+  ]
+}

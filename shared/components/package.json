@@ -12,6 +12,7 @@
     "chromatic": "npx chromatic"
   },
   "dependencies": {
+    "@hanarepo/styles": "*",
     "@hanarepo/token": "*",
     "@hanarepo/utils": "*",
     "react": "^18.2.0",

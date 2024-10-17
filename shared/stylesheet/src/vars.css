@@ -1,0 +1,129 @@
+:root {
+  /* space */
+  --hana-space-0: 0;
+  --hana-space-1: 4px;
+  --hana-space-2: 8px;
+  --hana-space-3: 12px;
+  --hana-space-4: 16px;
+  --hana-space-5: 20px;
+  --hana-space-6: 24px;
+  --hana-space-7: 28px;
+  --hana-space-8: 32px;
+  --hana-space-9: 36px;
+  --hana-space-10: 40px;
+  --hana-space-12: 48px;
+  --hana-space-16: 64px;
+  --hana-space-20: 80px;
+  --hana-space-24: 96px;
+  --hana-space-30: 120px;
+
+  /* font-size */
+  --hana-text-xsmall: 10px;
+  --hana-text-small: 12px;
+  --hana-text-medium: 14px;
+  --hana-text-large: 18px;
+  --hana-text-xlarge: 20px;
+  --hana-text-2xlarge: 24px;
+  --hana-text-3xlarge: 30px;
+  --hana-text-4xlarge: 36px;
+  --hana-text-5xlarge: 48px;
+
+  /* line-height */
+  --hana-leading-xsmall: 14px;
+  --hana-leading-small: 16px;
+  --hana-leading-medium: 20px;
+  --hana-leading-large: 24px;
+  --hana-leading-xlarge: 28px;
+  --hana-leading-2xlarge: 32px;
+  --hana-leading-3xlarge: 40px;
+  --hana-leading-4xlarge: 48px;
+  --hana-leading-5xlarge: 60px;
+
+  /* font-weight */
+  --hana-font-normal: 400;
+  --hana-font-medium: 500;
+  --hana-font-semibold: 600;
+  --hana-font-bold: 700;
+
+  /* border-radius */
+  --hana-radius-none: 0;
+  --hana-radius-xsmall: 2px;
+  --hana-radius-small: 4px;
+  --hana-radius-medium: 8px;
+  --hana-radius-large: 12px;
+  --hana-radius-xlarge: 16px;
+  --hana-radius-full: 9999px;
+
+  /* box-shadow */
+  --hana-shadow-small: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  --hana-shadow-medium: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+  --hana-shadow-large: 0 8px 16px 0 rgba(0, 0, 0, 0.08);
+
+  /* Color - Pirmary */
+  --hana-color-black: #111111;
+  --hana-color-white: #ffffff;
+  --hana-color-silver: #a5a5a5;
+
+  /* Color - Black  */
+  --hana-color-black-100: #d9d9d9;
+  --hana-color-black-200: #b0b0b0;
+  --hana-color-black-300: #858585;
+  --hana-color-black-400: #505050;
+  --hana-color-black-500: #2f2f2f;
+  --hana-color-black-600: #1c1c1c;
+  --hana-color-black-700: #000000;
+
+  /* Color - Green */
+  --hana-color-green-100: #e3f7e5;
+  --hana-color-green-200: #c1e9c7;
+  --hana-color-green-300: #97d8a5;
+  --hana-color-green-400: #75c88b;
+  --hana-color-green-500: #49b05c;
+  --hana-color-green-600: #3f9e51;
+  --hana-color-green-700: #358942;
+
+  /* Color - Blue */
+  --hana-color-blue-100: #bdddfc;
+  --hana-color-blue-200: #8ec5f9;
+  --hana-color-blue-300: #63acf6;
+  --hana-color-blue-400: #459af3;
+  --hana-color-blue-500: #2186e0;
+  --hana-color-blue-600: #1d77ca;
+  --hana-color-blue-700: #1965b2;
+
+  /* Color - Sky */
+  --hana-color-sky-100: #e6f9ff;
+  --hana-color-sky-200: #c1f0ff;
+  --hana-color-sky-300: #97e6ff;
+  --hana-color-sky-400: #75dfff;
+  --hana-color-sky-500: #49d2ff;
+  --hana-color-sky-600: #3fb9e5;
+  --hana-color-sky-700: #35a0c9;
+
+  /* Color - Yellow */
+  --hana-color-yellow-100: #fffbdb;
+  --hana-color-yellow-200: #fff5b8;
+  --hana-color-yellow-300: #ffef8e;
+  --hana-color-yellow-400: #ffe96c;
+  --hana-color-yellow-500: #ffe032;
+  --hana-color-yellow-600: #f5d127;
+  --hana-color-yellow-700: #e5b71d;
+
+  /* Color - Red */
+  --hana-color-red-100: #ffe7e9;
+  --hana-color-red-200: #ffc3c7;
+  --hana-color-red-300: #f99b9b;
+  --hana-color-red-400: #f56767;
+  --hana-color-red-500: #e63535;
+  --hana-color-red-600: #d33030;
+  --hana-color-red-700: #ba2626;
+
+  /* Color - Gray */
+  --hana-color-gray-100: #f7f7f7;
+  --hana-color-gray-200: #eeeeee;
+  --hana-color-gray-300: #dcdcdc;
+  --hana-color-gray-400: #bababa;
+  --hana-color-gray-500: #919191;
+  --hana-color-gray-600: #6f6f6f;
+  --hana-color-gray-700: #555555;
+}
