@@ -15,6 +15,7 @@ const meta: Meta<typeof Card> = {
       control: { type: "radio" },
     },
     children: {
+      
       description: "카드의 자식요소가 설정됩니다.",
     },
     sx: {

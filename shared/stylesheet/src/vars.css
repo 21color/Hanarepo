@@ -59,6 +59,13 @@
   --hana-shadow-medium: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
   --hana-shadow-large: 0 8px 16px 0 rgba(0, 0, 0, 0.08);
 
+  /* tint */
+  --hana-gray-tint-5: rgba(113, 118, 128, 0.05);
+  --hana-gray-tint-10: rgba(113, 118, 128, 0.1);
+  --hana-gray-tint-15: rgba(113, 118, 128, 0.15);
+  --hana-gray-tint-20: rgba(113, 118, 128, 0.2);
+  --hana-gray-tint-85: rgba(113, 118, 128, 0.85);
+
   /* Color - Pirmary */
   --hana-color-black: #111111;
   --hana-color-white: #ffffff;

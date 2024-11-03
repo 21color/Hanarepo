@@ -8,18 +8,20 @@ import {
 } from "react";
 import { BaseProps } from "../../types";
 
-export type DivProps<Element extends ElementType> = BaseProps<Element> & {
+export interface DivProps<Element extends ElementType> extends BaseProps<Element>, CSSProperties, PropsWithChildren {
   _active?: CSSObject;
   _focus?: CSSObject;
   _hover?: CSSObject;
   _before?: CSSObject;
   _after?: CSSObject;
   size?: CSSProperties["width"];
-} & PropsWithChildren &
-  CSSProperties;
+}
 
-export type DivComponent = <D extends ElementType = "div">(
-  props: DivProps<D> & {
-    ref?: ComponentPropsWithRef<D>["ref"];
-  },
-) => ReactNode | null;
+
+export interface DivComponent {
+  <D extends ElementType = "div">(
+    props: DivProps<D> & {
+      ref?: ComponentPropsWithRef<D>["ref"];
+    },
+  ): ReactNode | null;
+}

@@ -1,10 +1,8 @@
+import { vars } from "@hanarepo/token/vars";
 import type { CSSProperties, ElementType, PropsWithChildren } from "react";
 import type { BaseProps } from "../types";
-import { vars } from "@hanarepo/token/vars";
 
-export type TypographyProps<Element extends ElementType> = PropsWithChildren<
-  BaseProps<Element>
-> & {
+export interface TypographyProps<Element extends ElementType> extends PropsWithChildren<BaseProps<Element>> {
   /**
    * typography variant를 설정합니다.
    */
@@ -21,4 +19,5 @@ export type TypographyProps<Element extends ElementType> = PropsWithChildren<
    * line-clamp를 설정합니다.
    */
   numberOfLines?: number;
-};
+}
+

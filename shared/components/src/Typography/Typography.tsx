@@ -1,8 +1,8 @@
+import { css } from "@emotion/react";
 import { vars } from "@hanarepo/token/vars";
 import type { ElementType, Ref } from "react";
 import { forwardRef } from "react";
 import type { TypographyProps } from "./Typography.types";
-import { css } from "@emotion/react";
 
 const _Typography = <Element extends ElementType>(
   {
@@ -13,6 +13,7 @@ const _Typography = <Element extends ElementType>(
     textAlign,
     whiteSpace,
     className,
+    native,
     numberOfLines,
     sx,
     ...props
@@ -47,6 +48,7 @@ const _Typography = <Element extends ElementType>(
         ...sx,
       }}
       {...props}
+      {...native}
     >
       {children}
     </Element>

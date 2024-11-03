@@ -35,6 +35,14 @@ export const color = {
     infoHover: "var(--hana-color-blue-200)", 
     infoDark: "var(--hana-color-blue-700)", 
 
+    // tint
+    tint5: "var(--hana-gray-tint-5)",
+    tint10: "var(--hana-gray-tint-10)",
+    tint15: "var(--hana-gray-tint-15)",
+    tint20: "var(--hana-gray-tint-20)",
+    tint85: "var(--hana-gray-tint-85)",
+
+    // other
     light: "var(--hana-color-gray-100)", 
     dark: "var(--hana-color-black-700)", 
     white: "var(--hana-color-white)", 
@@ -43,6 +51,9 @@ export const color = {
     current: "currentColor",
     inherit: "inherit",
     initial: "initial",
+    textDisabled: "var(--hana-color-gray-500)",
+    text: "var(--hana-color-gray-700)",
+    textSub: "var(--hana-color-gray-600)",
   },
 
   // Custom colors

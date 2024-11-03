@@ -3,6 +3,7 @@
  * MUI Typography 가이드를 참고했습니다.
  */
 
+
 export const typography = {
   headline1: {
     letterSpacing: "-1.5px",
@@ -65,6 +66,19 @@ export const typography = {
     fontWeight: 400,
     letterSpacing: "0.4px",
   },
+
+  label: {
+    fontSize: '14px',
+    fontWeight: 400,
+    letterSpacing: '0.4px',
+  },
+
+  labelBold: {
+    fontSize: '14px',
+    fontWeight: 500,
+    letterSpacing: '0.4px',
+  },
+
   overline: {
     fontSize: "10px",
     fontWeight: 400,

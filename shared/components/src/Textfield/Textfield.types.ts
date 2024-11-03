@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { vars } from "@hanarepo/token/vars";
-import { InputHTMLAttributes } from "react";
+import { ElementType, InputHTMLAttributes } from "react";
 
 export type TextfieldVariantType = {
   outlined: ReturnType<typeof css>;
@@ -8,16 +8,16 @@ export type TextfieldVariantType = {
   standard: ReturnType<typeof css>;
 };
 
-export interface TextfieldProps {
+export interface TextfieldProps<E extends ElementType> {
   label?: string;
   variant: "outlined" | "filled" | "standard";
-  type?: InputHTMLAttributes<HTMLInputElement>["type"];
+  type?: InputHTMLAttributes<E>["type"];
   placeholder: string;
   value: string;
   validate?: boolean;
   defaultValue?: string;
   helperText?: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: React.ChangeEvent<E>) => void;
 }
 
 const baseStyle = css`
@@ -41,7 +41,7 @@ export const TextfieldVariants: TextfieldVariantType = {
   filled: css`
     background-color: ${vars.color.sky["200"]};
     border: none;
-    color: ${vars.color.gray["800"]};
+    color: ${vars.color.gray["700"]};
     border-radius: ${vars.rounded.small}px;
     ${baseStyle}
     &:focus {

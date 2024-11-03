@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { ComponentPropsWithRef, ElementType, forwardRef } from "react";
 
-import { DivProps, DivComponent } from "./Div.types";
+import { DivComponent, DivProps } from "./Div.types";
 
 export const Div: DivComponent = forwardRef(
   <E extends ElementType>(
@@ -13,6 +13,7 @@ export const Div: DivComponent = forwardRef(
       _after,
       size,
       children,
+      native,
       as,
       sx,
       ...props
@@ -35,6 +36,7 @@ export const Div: DivComponent = forwardRef(
           ...props,
           ...sx,
         }}
+        {...native}
       >
         {children}
       </Element>
