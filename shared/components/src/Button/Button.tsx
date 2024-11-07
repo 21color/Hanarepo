@@ -1,5 +1,3 @@
-import { ButtonProps } from "./Button.types";
-import { ButtonObject, ButtonBase } from "./Button.css";
 import { css } from "@emotion/react";
 import {
   ComponentPropsWithRef,
@@ -7,6 +5,8 @@ import {
   forwardRef,
   ReactNode,
 } from "react";
+import { ButtonBase, ButtonObject } from "./Button.css";
+import { ButtonProps } from "./Button.types";
 
 type ButtonComponent = <E extends ElementType = "button">(
   props: ButtonProps<E> & {
@@ -32,7 +32,9 @@ const Button: ButtonComponent = forwardRef(
     ref: ComponentPropsWithRef<E>["ref"],
   ) => {
     const buttonStyle = css`
-      ${fullWidth ? { width: "100%" } : {}}
+      ${fullWidth ? { width: "100%" } : {
+        width: "fit-content",
+      }}
       ${ButtonBase}
       ${ButtonObject[variant]}
       ${ButtonObject[size]}

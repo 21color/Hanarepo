@@ -4,8 +4,6 @@ import { CardProps } from "./Card.type";
 import { CardContent } from "./CardContent";
 import { CardHeader } from "./CardHeader";
 
-
-
 export const Card = <E extends ElementType>({
   children,
   size = "medium",
@@ -30,3 +28,4 @@ export const Card = <E extends ElementType>({
 
 Card.Header = CardHeader;
 Card.Content = CardContent;
+

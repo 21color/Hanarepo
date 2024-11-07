@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@hanarepo/components": "*",
+    "@hanarepo/styles": "*",
     "@hanarepo/token": "*",
     "@hanarepo/utils": "*",
     "axios": "^1.7.2",

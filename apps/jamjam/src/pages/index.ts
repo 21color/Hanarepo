@@ -1,7 +1,6 @@
-import Home from "./home";
-import Login from "./login";
-import Feed from "./feed";
-import Mypage from "./mypage";
 import ErrorPage from "./error";
+import { Home } from './home';
+import { TodoList } from "./todoList";
 
-export { Home, Login, Feed, Mypage, ErrorPage };
+export { ErrorPage, Home, TodoList };
+
