@@ -1,0 +1,80 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+
+
+<Meta title="Colors" />
+
+# Color Palette ⭐️
+---
+## Sementic Colors
+<ColorPalette>
+<ColorItem
+  title="primary"
+  colors={{
+    primary: "var(--hana-color-blue-500)", 
+    primaryHover: "var(--hana-color-blue-400)", 
+    primaryDark: "var(--hana-color-blue-700)", 
+    primaryLight: "var(--hana-color-blue-100)", 
+  }}
+/>
+<ColorItem
+  title="secondary"
+  colors={{
+    secondary: "var(--hana-color-gray-600)", 
+    secondaryHover: "var(--hana-color-gray-500)", 
+    secondaryDark: "var(--hana-color-gray-700)",
+    secondaryLight: "var(--hana-color-gray-300)", 
+  }}
+/>
+<ColorItem
+  title="success"
+  colors={{
+    success: "var(--hana-color-green-500)", 
+    successHover: "var(--hana-color-green-400)", 
+    successDark: "var(--hana-color-green-700)",
+    successLight: "var(--hana-color-green-100)", 
+  }}
+/>
+<ColorItem 
+  title="error"
+  colors={{
+    error: "var(--hana-color-red-500)", 
+    errorHover: "var(--hana-color-red-400)", 
+    errorDark: "var(--hana-color-red-700)",
+    errorLight: "var(--hana-color-red-100)", 
+  }}
+/>
+<ColorItem
+  title="warning"
+  colors={{
+    warning: "var(--hana-color-yellow-600)", 
+    warningHover: "var(--hana-color-yellow-500)", 
+    warningDark: "var(--hana-color-yellow-700)", 
+    warningLight: "var(--hana-color-yellow-100)",
+  }}
+/>
+<ColorItem
+  title="info"
+  colors={{
+    info: "var(--hana-color-blue-300)", 
+    infoHover: "var(--hana-color-blue-200)", 
+    infoDark: "var(--hana-color-blue-700)", 
+  }}
+/>
+<ColorItem
+  title="text"
+  colors={{
+    textDisabled: "var(--hana-color-gray-500)",
+    text: "var(--hana-color-gray-700)",
+    textSub: "var(--hana-color-gray-600)",
+  }}
+/>
+<ColorItem
+  title="other"
+  colors={{
+    light: "var(--hana-color-gray-100)", 
+    dark: "var(--hana-color-black-700)", 
+    white: "var(--hana-color-white)", 
+    black: "var(--hana-color-black)", 
+  }}
+/>
+</ColorPalette>

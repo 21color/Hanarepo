@@ -1,12 +1,12 @@
+import { border } from "./border";
 import { color } from "./color";
 import { fontSize } from "./font-size";
 import { fontWeight } from "./font-weight";
 import { rounded } from "./rounded";
-import { spacing } from "./spacing";
-import { border } from "./border";
 import { shadow } from "./shadow";
-import { zIndex } from "./zIndex";
+import { spacing } from "./spacing";
 import { typography } from "./typography";
+import { zIndex } from "./zIndex";
 
 export const vars = {
   color,
@@ -18,4 +18,5 @@ export const vars = {
   shadow,
   zIndex,
   typography,
+  
 } as const;

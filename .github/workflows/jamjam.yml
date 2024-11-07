@@ -1,24 +1,24 @@
-name: Hanastagram Deployment
-run-name: ${{ github.actor }} 의 Hanastagram 배포
+name: Jamjam Deployment
+run-name: ${{ github.actor }} 의 Jamjam 배포
 
 on:
   push:
     branches:
       - main
     paths:
-      - "apps/hanastagram/**"
-      - ".github/workflows/hanastagram.yml"
+      - "apps/jamjam/**"
+      - ".github/workflows/jamjam.yml"
   pull_request:
     branches:
       - main
     paths:
-      - "apps/hanastagram/**"
-      - ".github/workflows/hanastagram.yml"
+      - "apps/jamjam/**"
+      - ".github/workflows/jamjam.yml"
   release:
     types: [created]
 
 jobs:
-  hanastagram:
+  jamjam:
     runs-on: ubuntu-latest
     outputs:
       status: ${{ job.status}}

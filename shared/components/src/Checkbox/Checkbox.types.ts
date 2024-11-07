@@ -11,9 +11,13 @@ export interface CheckboxProps extends Omit<ComponentProps<'input'>, 'value' | '
 
 export interface CheckboxIconProps {
   isIndeterminate?: boolean;
+  isChecked?: boolean;
 }
 
 export interface CheckboxSetProps extends PropsWithChildren<BaseProps> {
   sx?: BaseProps['sx'];
 }
 
+export interface CheckboxLabelProps extends BaseProps {
+  iconPosition?: 'left' | 'right';
+}

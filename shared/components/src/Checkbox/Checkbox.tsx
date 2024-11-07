@@ -5,6 +5,7 @@ import { checkboxIconCSS } from './Checkbox.css';
 import type { CheckboxIconProps, CheckboxProps } from './Checkbox.types';
 
 export const CheckboxIcon = ({ isIndeterminate }: CheckboxIconProps) => {
+
   const path = isIndeterminate ? "M2.5 6H9.5" : "M9.5 3L4.6875 8.5L2.5 6";
 
   return (
@@ -41,7 +42,8 @@ export const Checkbox = ({
 
   return (
     <Flex display='inline-flex' as="label" native={{ htmlFor: props.id}}>
-      <input type="checkbox" data-blind onChange={_onChange} {...props} />
+      <input type="checkbox" data-blind onChange={_onChange} {...props}
+      {...props} />
       <CheckboxIcon isIndeterminate={isIndeterminate} />
     </Flex>
   );

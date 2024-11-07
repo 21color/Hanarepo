@@ -1,7 +1,8 @@
-import "./App.css";
+import { ERROR, FEED, HOME, LOGIN, MYPAGE } from "@/constants/routes";
+import 'normalize.css';
 import { Route, Routes } from "react-router-dom";
-import { LOGIN, HOME, FEED, MYPAGE, ERROR } from "@/constants/routes";
-import { Login, Home, Mypage, Feed, ErrorPage } from "./pages";
+import "./App.css";
+import { ErrorPage, Feed, Home, Login, Mypage } from "./pages";
 
 function App() {
   return (

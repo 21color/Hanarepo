@@ -1,5 +1,5 @@
 {
-  "name": "@hanarepo/hanastagram",
+  "name": "@hanarepo/jamjam",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
@@ -12,6 +12,7 @@
     "@hanarepo/token": "*",
     "@hanarepo/utils": "*",
     "axios": "^1.7.2",
+    "normalize.css": "^8.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.1",

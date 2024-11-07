@@ -8,12 +8,12 @@ const Layout = ({ children }: ILayoutProps) => {
 const Column = ({ children }: ILayoutProps) => {
   return (
     <div
-      css={css`
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      `}
+      css={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
     >
       {children}
     </div>
