@@ -18,6 +18,19 @@ const todoSlice = createSlice({
       }
       state.todos.push(newTodo);
     },
+    setEditTodo: (state, action: PayloadAction<number>) => {
+      const todo = state.todos.find(todo => todo.id === action.payload);
+      console.log(todo);
+      if (todo) {
+        todo.editing = !todo.editing;
+      }
+    },
+    editTodo: (state, action: PayloadAction<{ id: number, text: string }>) => {
+      const todo = state.todos.find(todo => todo.id === action.payload.id);
+      if (todo) {
+        todo.text = action.payload.text;
+      }
+    },
     toggleTodo: (state, action: PayloadAction<number>) => {
       const todo = state.todos.find(todo => todo.id === action.payload);
       if (todo) {
@@ -33,7 +46,7 @@ const todoSlice = createSlice({
   }
 });
 
-export const { addTodo, toggleTodo, deleteTodo, resetTodos } = todoSlice.actions;
+export const { addTodo, toggleTodo, deleteTodo, resetTodos, editTodo, setEditTodo } = todoSlice.actions;
 export default todoSlice.reducer;
 
 

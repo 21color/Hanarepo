@@ -23,6 +23,7 @@ export const CheckboxLabel = ({
       as="label"
       alignItems='center'
       gap={vars.spacing.small}
+      width={iconPosition === "right" ? "100%" : "fit-content"}
       css={[checkboxLabelCSS({ iconPosition }), sx]}
       native={{
         "data-checkbox-icon-position": iconPosition,

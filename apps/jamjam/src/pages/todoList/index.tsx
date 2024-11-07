@@ -1,4 +1,4 @@
-import { addTodo, resetTodos, toggleTodo } from '@/_shared/store/todo/slice';
+import { addTodo, editTodo, resetTodos, setEditTodo, toggleTodo } from '@/_shared/store/todo/slice';
 import { RootState } from '@/_shared/store/todo/store';
 import { Button, Card, Checkbox, Flex, Textfield } from '@hanarepo/components';
 import { vars } from '@hanarepo/token/vars';
@@ -11,12 +11,25 @@ export const TodoList = () => {
   const todos = useSelector((state: RootState) => state.todos.todos);
   const dispatch = useDispatch();
   const [todo, setTodo] = useState('');
+  const [newTodo, setNewTodo] = useState('');
 
   const handelAddTodo = () => {
     if (todo.trim() === '') return;
     dispatch(addTodo(todo));
     setTodo('');
   }
+
+  const handelEditTodo = (id: number, text: string) => {
+    if (text.trim() === '') return;
+    dispatch(editTodo({
+      id,
+      text,
+    }));
+    dispatch(setEditTodo(id));
+    setTodo('');
+  }
+
+  const sortedTodos = todos.slice().sort((a, b) => a.completed === b.completed ? 0 : a.completed ? 1 : -1);
 
   return (
     <Flex.Column width={600}gap={20}>
@@ -37,9 +50,7 @@ export const TodoList = () => {
             onClick={handelAddTodo} />
             <Button variant="critical"
               title="모두 삭제"
-              onClick={() => {
-                 dispatch(resetTodos());
-              }
+              onClick={() => {dispatch(resetTodos());}
             } />
           </Flex>
           <Flex.Column gap={10}>
@@ -50,8 +61,27 @@ export const TodoList = () => {
               padding: '12px 6px',
               gap: 8,
             }}>
-            {todos.map((todo) => (
-              <li key={todo.id}>
+            {sortedTodos.map((todo) => (
+              <li key={todo.id} css={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}>
+                {todo.editing ? (
+                  <Flex gap={10}>
+                    <Textfield 
+                      placeholder={todo.text}
+                      variant="standard"
+                      value={ newTodo === '' ? todo.text : newTodo }
+                      onChange={(e) => setNewTodo(e.target.value)}
+                    />
+                    <Button 
+                      variant="primary"
+                      title="완료"
+                      onClick={() => handelEditTodo(todo.id, newTodo)}
+                    />
+                  </Flex>
+                ) : (
                 <Checkbox.Label>
                   <Checkbox 
                     checked={todo.completed}
@@ -64,10 +94,17 @@ export const TodoList = () => {
                     textDecoration: todo.completed ? 'line-through' : 'none',
                     marginLeft: 8,
                     fontSize: 18,
-                    color: todo.completed ? vars.color.semantic.textDisabled : vars.color.text,
+                    color: todo.completed ? vars.color.semantic.textDisabled : vars.color.semantic.text,
                   }}
                 >{todo.text}</span>
+                <Button 
+                  variant="secondary"
+                  title="수정"
+                  onClick={() => {dispatch(setEditTodo(todo.id));
+                  }}
+                />
                 </Checkbox.Label>
+                )}
               </li>
             ))}
             </ul>
