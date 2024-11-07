@@ -45,9 +45,7 @@
   "dependencies": {
     "@emotion/css": "^11.13.0",
     "@hanarepo/styles": "workspace:^",
-    "@reduxjs/toolkit": "^2.3.0",
-    "@types/node": "^20.11.6",
-    "react-redux": "^9.1.2"
+    "@types/node": "^20.11.6"
   },
   "type": "module",
   "version": "1.0.0"

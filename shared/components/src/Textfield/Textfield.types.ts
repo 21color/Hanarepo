@@ -8,7 +8,7 @@ export type TextfieldVariantType = {
   standard: ReturnType<typeof css>;
 };
 
-export interface TextfieldProps<E extends ElementType> {
+export interface TextfieldProps<E extends HTMLElement = HTMLInputElement> {
   label?: string;
   variant: "outlined" | "filled" | "standard";
   type?: InputHTMLAttributes<E>["type"];

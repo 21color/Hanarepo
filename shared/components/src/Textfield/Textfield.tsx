@@ -1,12 +1,12 @@
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { vars } from "@hanarepo/token/vars";
 import {
   TextfieldProps,
   TextfieldVariants,
-  validateStyle,
+  validateStyle
 } from "./Textfield.types";
 
-import styled from "@emotion/styled";
-import { css } from "@emotion/react";
 
 export const Textfield = ({
   label,
@@ -17,7 +17,8 @@ export const Textfield = ({
   variant = "standard",
   validate = false,
   helperText,
-}: TextfieldProps) => {
+}: TextfieldProps<HTMLInputElement>
+) => {
   return (
     <TextfieldWrapper>
       <label css={Label}>{label}</label>
