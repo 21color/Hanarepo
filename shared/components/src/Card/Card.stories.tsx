@@ -1,8 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { Card } from "./Card";
-import { Flex } from "../utils";
 import { Typography } from "../Typography";
+import { Flex } from "../utils";
+import { Card } from "./Card";
+
+import Hana from "../../../public/assets/hana.png";
 
 const meta: Meta<typeof Card> = {
   tags: ["autodocs"],
@@ -37,12 +39,12 @@ export const Default: Story = {
   render: (args) => {
     return (
       <Card {...args}>
-        <Card.Header title="제목입니다." subtitle="부제목입니다." />
+        <Card.Header title="이하나 입니다." subtitle="개발을 하고있어요" />
 
         <Card.Content>
           <Flex>
-            <Typography colorToken="info" variant="body1">
-              내용입니다.
+            <Typography colorToken="textSub" variant="body1">
+              <img src={Hana} alt="Hana" />
             </Typography>
           </Flex>
         </Card.Content>

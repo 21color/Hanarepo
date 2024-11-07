@@ -27,7 +27,9 @@ export const CardHeader: <Element extends ElementType>({
     >
       <Flex.Column gap={10}>
         <Typography variant="headline4">{title}</Typography>
-        {subtitle && <Typography variant="subtitle2">{subtitle}</Typography>}
+        {subtitle && <Typography 
+          colorToken="textSub"
+          variant="subtitle1">{subtitle}</Typography>}
       </Flex.Column>
       {children}
     </Flex>

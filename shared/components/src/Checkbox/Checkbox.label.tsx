@@ -6,6 +6,10 @@ import { Checkbox } from './Checkbox';
 import { checkboxLabelCSS } from './Checkbox.css';
 import type { CheckboxLabelProps } from './Checkbox.types';
 
+
+/**
+ * checkbox와 label을 함께 렌더링
+ */
 export const CheckboxLabel = ({
   children,
   iconPosition = "left",

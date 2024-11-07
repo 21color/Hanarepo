@@ -9,6 +9,7 @@ import type { CheckboxIconProps, CheckboxProps } from './Checkbox.types';
 
 export const CheckboxIcon = ({ isIndeterminate }: CheckboxIconProps) => {
 
+  // prop에 따라 인디케이터 상태 변경
   const path = isIndeterminate ? "M2.5 6H9.5" : "M9.5 3L4.6875 8.5L2.5 6";
 
   return (
@@ -39,6 +40,7 @@ export const Checkbox = ({
   onChangeChecked,
   ...props
 }: CheckboxProps) => {
+  // _onChange 이벤트 핸들러는. onChangeChecked와 onChange를 함께 호출해서 상태 업데이트
   const _onChange: ChangeEventHandler<HTMLInputElement> = (e) => {
     onChange?.(e);
     onChangeChecked?.(e.target.checked);
