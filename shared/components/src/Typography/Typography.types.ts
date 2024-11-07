@@ -2,7 +2,7 @@ import { vars } from "@hanarepo/token/vars";
 import type { CSSProperties, ElementType, PropsWithChildren } from "react";
 import type { BaseProps } from "../types";
 
-export interface TypographyProps<Element extends ElementType> extends PropsWithChildren<BaseProps<Element>> {
+export interface TypographyProps<Element extends ElementType> extends PropsWithChildren<BaseProps<Element>> {
   /**
    * typography variant를 설정합니다.
    */

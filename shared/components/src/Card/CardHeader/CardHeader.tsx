@@ -1,8 +1,8 @@
-import { CardHeaderCSS } from "./CardHeader.css";
-import { CardHeaderProps } from "./CardHeader.types";
-import { Flex } from "../../utils";
 import { ElementType } from "react";
 import { Typography } from "../../Typography";
+import { Flex } from "../../utils";
+import { CardHeaderCSS } from "./CardHeader.css";
+import { CardHeaderProps } from "./CardHeader.types";
 
 export const CardHeader: <Element extends ElementType>({
   sx,
@@ -25,9 +25,9 @@ export const CardHeader: <Element extends ElementType>({
       }}
       {...props}
     >
-      <Flex.Column>
-        <Typography variant="headline3">{title}</Typography>
-        {subtitle && <Typography variant="subtitle1">{subtitle}</Typography>}
+      <Flex.Column gap={10}>
+        <Typography variant="headline4">{title}</Typography>
+        {subtitle && <Typography variant="subtitle2">{subtitle}</Typography>}
       </Flex.Column>
       {children}
     </Flex>

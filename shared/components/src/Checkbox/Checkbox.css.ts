@@ -47,25 +47,24 @@ export const checkboxIconCSS = css({
   width: "16px",
   height: "16px",
 
-  backgroundColor: vars.color.semantic.secondary,
+  backgroundColor: vars.color.semantic.white,
   borderRadius: `${vars.rounded.small}px`,
-  color: vars.color.gray[700],
+  color: vars.color.semantic.white,
   outline: `1px solid ${vars.color.gray[300]}`,
   outlineOffset: "-1px",
 
   transition: "all ease-in-out 0.1s",
   cursor: "pointer",
 
-  "checkbox-icon" : {
-    display: "none",
+  ".checkbox-icon": {
+    display: 'none',
   },
 
-  "&:where(input:checkbox + &)": {
-
+  "&:where(input:checked + &)": {
     backgroundColor: vars.color.semantic.primary,
     outlineColor: "transparent",
       
-    "checkbox-icon": {
+    ".checkbox-icon": {
       display: 'block',
     },
   },

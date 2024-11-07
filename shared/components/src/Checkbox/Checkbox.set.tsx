@@ -1,14 +1,9 @@
 import { vars } from '@hanarepo/token/vars';
-import { Label } from '../Label/Label';
 import { Flex } from '../utils';
-import { Checkbox } from './Checkbox';
-import { CheckboxHelperText } from './Checkbox.helperText';
-import { CheckboxLabel } from './Checkbox.label';
 import { CheckboxSetProps } from './Checkbox.types';
 
 
-
-const CheckboxSet = ({
+export const CheckboxSet = ({
   children, sx
 }: CheckboxSetProps) => {
   return (
@@ -32,13 +27,4 @@ const CheckboxSet = ({
   )
 }
 
-const CheckboxNameSpace = Object.assign(Checkbox, {
-  Set: CheckboxSet,
-  Label: CheckboxLabel,
-  HelperText: CheckboxHelperText,
-  Legend: Label,
-});
-
-export { CheckboxNameSpace as Checkbox };
-  
 

@@ -1,8 +1,10 @@
-import { CardHeader } from "./CardHeader";
-import { CardContent } from "./CardContent";
 import { ElementType } from "react";
-import { CardProps } from "./Card.type";
 import { cardCSS } from "./Card.css";
+import { CardProps } from "./Card.type";
+import { CardContent } from "./CardContent";
+import { CardHeader } from "./CardHeader";
+
+
 
 export const Card = <E extends ElementType>({
   children,

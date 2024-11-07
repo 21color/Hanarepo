@@ -19,11 +19,10 @@ export const CheckboxLabel = ({
       as="label"
       alignItems='center'
       gap={vars.spacing.small}
+      css={[checkboxLabelCSS({ iconPosition }), sx]}
       native={{
         "data-checkbox-icon-position": iconPosition,
       }}
-      css={[checkboxLabelCSS({ iconPosition }), sx]}
-
       >
         {children || <Checkbox {...props} />}
 
@@ -37,7 +36,6 @@ export const CheckboxLabel = ({
             </Typography>
         )}
       </Flex>
-  
   );
 
 };
