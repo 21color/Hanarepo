@@ -1,25 +1,11 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { TodoState } from './types';
+import { configureStore } from '@reduxjs/toolkit';
+import todoReducer from './slice';
 
-export const initialState: TodoState = {
-  todos: [],
-};
-
-
-const todoSlice = createSlice({
-  name: 'todos',
-  initialState,
-  reducers: {
-    addTodo: (state, action: PayloadAction<string>) => {
-      const newTodo = {
-        id: Date.now(),
-        text: action.payload,
-      }
-
-    }
+export const store = configureStore({
+  reducer: {
+    todos: todoReducer,
   }
-})
+});
 
-
-
-
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

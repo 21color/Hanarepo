@@ -1,12 +1,13 @@
-import React from "react";
+import Loading from "@/pages/Loading";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.js";
-import "./index.css";
-import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import { Suspense } from "react";
-import Loading from "@/pages/Loading";
+import { Provider } from 'react-redux';
+import { BrowserRouter } from "react-router-dom";
+import { store } from './_shared/store/todo/store.js';
+import App from "./App.js";
+import "./index.css";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -23,7 +24,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <Suspense fallback={<Loading />}>
       <BrowserRouter>
         <React.StrictMode>
+          <Provider store={store}>
           <App />
+          </Provider>
           <ReactQueryDevtools />
         </React.StrictMode>
       </BrowserRouter>

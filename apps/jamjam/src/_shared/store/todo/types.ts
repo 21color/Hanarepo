@@ -1,15 +1,8 @@
 
-interface Todo {
-  id: string;
+export interface Todo {
+  id: number;
   text: string;
   completed: boolean;
-}
-
-export interface TodoAction {
-  addTodo: (text: string) => void;
-  toggleTodo: (id: string ) => void;
-  removeTodo: (id: string ) => void;
-  resetTodo: () => void;
 }
 
 export interface TodoState {
