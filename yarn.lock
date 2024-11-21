@@ -7180,6 +7180,7 @@ __metadata:
     eslint-plugin-storybook: "npm:^0.8.0"
     prettier: "npm:^3.3.2"
     storybook: "npm:^8.2.2"
+    ts-pattern: "npm:^5.5.0"
     typescript: "npm:^5.5.3"
     vite: "npm:^5.3.3"
   languageName: unknown
@@ -10506,6 +10507,13 @@ __metadata:
   version: 2.2.0
   resolution: "ts-dedent@npm:2.2.0"
   checksum: 10c0/175adea838468cc2ff7d5e97f970dcb798bbcb623f29c6088cb21aa2880d207c5784be81ab1741f56b9ac37840cbaba0c0d79f7f8b67ffe61c02634cafa5c303
+  languageName: node
+  linkType: hard
+
+"ts-pattern@npm:^5.5.0":
+  version: 5.5.0
+  resolution: "ts-pattern@npm:5.5.0"
+  checksum: 10c0/4ae1fbeadcf193e72b27419d5fe71f559c100e45710eabf29e2ff3a8fa9ba29adfcd6d5d7d8169b95e2b264683a2eb8d94dbd3c893357b045b52b0c34c2b7c72
   languageName: node
   linkType: hard
 

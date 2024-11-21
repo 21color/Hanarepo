@@ -1,24 +1,15 @@
 import { Meta, StoryObj } from "@storybook/react";
+import Pagination from '../Pagination/Pagination';
+import { usePagination } from '../Pagination/Pagination.hooks';
+import { Flex } from '../utils';
 import { Table } from './Table';
 import { TableData } from './Table.types';
 
-const tableDummyData = [
-  {
-    name: 'John Doe',
-    age: 30,
-    job: 'Software Engineer',
-  },
-  {
-    name: 'Jane Doe',
-    age: 25,
-    job: 'Designer',
-  },
-  {
-    name: 'James Smith',
-    age: 35,
-    job: 'Product Manager',
-  },
-];
+const data = Array.from({ length: 100 }, (_, i) => ({
+  id: i + 1,
+  name: `User ${i + 1}`,
+  age: 20 + (i % 10),
+}));
 
 const meta: Meta<typeof Table> = {
   tags: ["autodocs"],
@@ -43,7 +34,20 @@ const meta: Meta<typeof Table> = {
 
 export const TableStory = () => {
 
+  const { 
+    currentPageData,
+    totalPages,
+    currentPage,
+    nextPage,
+    prevPage,
+    goToPage, } = usePagination({
+    totalItems: data.length,
+    itemsPerPage: 5,
+    data,
+  });
+
   const renderRow = (item: TableData<string | number>, index: number) => {
+  
 
     return (
     <Table.Row key={index}>
@@ -55,11 +59,20 @@ export const TableStory = () => {
   };
 
   return (
+    <Flex.Column gap={10}>
     <Table 
-      columns={Object.keys(tableDummyData[0])}
-      data={tableDummyData}
+      columns={Object.keys(data[0])}
+      data={currentPageData}
       renderRow={renderRow}
-    />
+      />
+      <Pagination 
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={goToPage}
+        onNextPage={nextPage}
+        onPrevPage={prevPage}
+        />
+    </Flex.Column>
   );
 };
 

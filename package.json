@@ -45,7 +45,8 @@
   "dependencies": {
     "@emotion/css": "^11.13.0",
     "@hanarepo/styles": "workspace:^",
-    "@types/node": "^20.11.6"
+    "@types/node": "^20.11.6",
+    "ts-pattern": "^5.5.0"
   },
   "type": "module",
   "version": "1.0.0"
